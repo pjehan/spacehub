@@ -141,4 +141,3 @@ Pour des raisons de simplicité, ce fichier ne devra pas dépasser les 300 ligne
 
 - Navigateurs modernes (Chrome, Firefox, Safari, Edge)
 - Responsive : mobile, tablette, desktop
-- Compatible avec Twig (Symfony)
