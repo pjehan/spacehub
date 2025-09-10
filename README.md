@@ -39,11 +39,11 @@ SpaceHub est une entreprise spécialisée dans la location d'espaces pour des é
 
 Logo du site :
 
-![Logo SpaceHub](/logo.svg)
+![Logo SpaceHub](/assets/logo.svg)
 
 Favicon :
 
-![Favicon SpaceHub](/favicon.svg)
+![Favicon SpaceHub](/assets/favicon.svg)
 
 ### Palette de couleurs
 
