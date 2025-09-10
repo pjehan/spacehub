@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Lieux - SpaceHub</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html">
+                        <img src="assets/images/logo.svg" alt="SpaceHub" class="logo">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="venues.html" class="nav-link active">Lieux</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-outline">Connexion</a>
+                    <a href="register.html" class="btn btn-primary">S'inscrire</a>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="mobile-menu-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                
+                <div class="mobile-nav-menu">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li><a href="venues.html" class="nav-link active">Lieux</a></li>
+                    </ul>
+                    <div class="mobile-nav-actions">
+                        <a href="login.html" class="btn btn-outline">Connexion</a>
+                        <a href="register.html" class="btn btn-primary">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content text-center">
+                <h1 class="page-title mb-sm">Nos Lieux</h1>
+                <p class="page-description">
+                    Découvrez notre sélection d'espaces uniques pour tous vos événements
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters">
+        <div class="container">
+            <div class="filters-wrapper flex gap-md">
+                <div class="filter-group">
+                    <label for="location">Localisation</label>
+                    <select id="location" class="filter-select">
+                        <option value="">Toutes les villes</option>
+                        <option value="paris">Paris</option>
+                        <option value="lyon">Lyon</option>
+                        <option value="marseille">Marseille</option>
+                        <option value="bordeaux">Bordeaux</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="capacity">Capacité</label>
+                    <select id="capacity" class="filter-select">
+                        <option value="">Toutes les capacités</option>
+                        <option value="small">1-30 personnes</option>
+                        <option value="medium">31-100 personnes</option>
+                        <option value="large">100+ personnes</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price">Budget</label>
+                    <select id="price" class="filter-select">
+                        <option value="">Tous les budgets</option>
+                        <option value="low">Moins de 150€</option>
+                        <option value="medium">150€ - 300€</option>
+                        <option value="high">Plus de 300€</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary">Rechercher</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venues Grid -->
+    <section class="venues-listing">
+        <div class="container">
+            <div class="venues-header flex justify-between items-center mb-lg">
+                <p class="venues-count">12 lieux trouvés</p>
+                <div class="sort-options flex items-center gap-sm">
+                    <select class="sort-select">
+                        <option value="name">Trier par nom</option>
+                        <option value="price">Trier par prix</option>
+                        <option value="capacity">Trier par capacité</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="venues-grid">
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=4" alt="Salle de conférence moderne" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Salle Horizon</h3>
+                        <p class="card-text venue-location">Paris 8ème</p>
+                        <p class="card-text venue-capacity">Jusqu'à 150 personnes</p>
+                        <p class="venue-price">À partir de 250€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=5" alt="Studio lumineux" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Studio Lumière</h3>
+                        <p class="card-text venue-location">Lyon 2ème</p>
+                        <p class="card-text venue-capacity">Jusqu'à 50 personnes</p>
+                        <p class="venue-price">À partir de 120€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=6" alt="Campus Innovation" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Campus Innovation</h3>
+                        <p class="card-text venue-location">Bordeaux centre</p>
+                        <p class="card-text venue-capacity">Jusqu'à 80 personnes</p>
+                        <p class="venue-price">À partir de 180€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=7" alt="Espace Créatif" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Espace Créatif</h3>
+                        <p class="card-text venue-location">Paris 11ème</p>
+                        <p class="card-text venue-capacity">Jusqu'à 40 personnes</p>
+                        <p class="venue-price">À partir de 90€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=8" alt="Salle Executive" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Salle Executive</h3>
+                        <p class="card-text venue-location">Marseille centre</p>
+                        <p class="card-text venue-capacity">Jusqu'à 120 personnes</p>
+                        <p class="venue-price">À partir de 220€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=9" alt="Lab Co-working" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Lab Co-working</h3>
+                        <p class="card-text venue-location">Lyon 6ème</p>
+                        <p class="card-text venue-capacity">Jusqu'à 60 personnes</p>
+                        <p class="venue-price">À partir de 140€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=10" alt="Auditorium Central" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Auditorium Central</h3>
+                        <p class="card-text venue-location">Paris 1er</p>
+                        <p class="card-text venue-capacity">Jusqu'à 300 personnes</p>
+                        <p class="venue-price">À partir de 500€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=11" alt="Workshop Space" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Workshop Space</h3>
+                        <p class="card-text venue-location">Bordeaux nord</p>
+                        <p class="card-text venue-capacity">Jusqu'à 25 personnes</p>
+                        <p class="venue-price">À partir de 80€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=12" alt="Showroom Design" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Showroom Design</h3>
+                        <p class="card-text venue-location">Paris 3ème</p>
+                        <p class="card-text venue-capacity">Jusqu'à 70 personnes</p>
+                        <p class="venue-price">À partir de 160€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination flex justify-center items-center gap-md">
+                <button class="btn btn-outline" disabled>Précédent</button>
+                <span class="pagination-info">Page 1 sur 2</span>
+                <button class="btn btn-outline">Suivant</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/logo-white.svg" alt="SpaceHub" class="footer-logo">
+                    <p>Des lieux exceptionnels pour vos événements professionnels.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Lieux</h4>
+                    <ul>
+                        <li><a href="#salles-reunion">Salles de réunion</a></li>
+                        <li><a href="#espaces-evenements">Espaces événements</a></li>
+                        <li><a href="#coworking">Coworking</a></li>
+                        <li><a href="#formations">Salles de formation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#aide">Centre d'aide</a></li>
+                        <li><a href="mailto:contact@spacehub.fr">Nous contacter</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:contact@spacehub.fr">contact@spacehub.fr</a></p>
+                    <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SpaceHub. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

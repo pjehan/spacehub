@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SpaceHub</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html">
+                        <img src="assets/images/logo.svg" alt="SpaceHub" class="logo">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="venues.html" class="nav-link">Lieux</a></li>
+                    <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="user-menu">
+                        <span class="user-name">Marie Dubois</span>
+                        <a href="#logout" class="btn btn-outline btn-sm">Déconnexion</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="mobile-menu-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                
+                <div class="mobile-nav-menu">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li><a href="venues.html" class="nav-link">Lieux</a></li>
+                        <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                    </ul>
+                    <div class="mobile-nav-actions">
+                        <span class="user-name">Marie Dubois</span>
+                        <a href="#logout" class="btn btn-outline">Déconnexion</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header">
+        <div class="container">
+            <div class="dashboard-welcome">
+                <h1 class="dashboard-title mb-sm">Bienvenue, Marie ! 👋</h1>
+                <p class="dashboard-subtitle">Gérez vos réservations et vos lieux en un coup d'œil</p>
+            </div>
+            
+            <div class="dashboard-stats">
+                <div class="card card-sm">
+                    <div class="card-body flex items-center gap-md">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-content">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Réservations actives</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-sm">
+                    <div class="card-body flex items-center gap-md">
+                        <div class="stat-icon">🏢</div>
+                        <div class="stat-content">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Lieux proposés</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-sm">
+                    <div class="card-body flex items-center gap-md">
+                        <div class="stat-icon">⏰</div>
+                        <div class="stat-content">
+                            <span class="stat-number">5 jours</span>
+                            <span class="stat-label">Prochaine réservation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard-content">
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Quick Actions -->
+                <div class="dashboard-section">
+                    <h2 class="section-title mb-md">Actions rapides</h2>
+                    <div class="quick-actions-grid">
+                        <a href="venues.html" class="card card-interactive card-flat">
+                            <div class="card-body text-center">
+                                <div class="action-icon">🔍</div>
+                                <h3 class="card-title">Rechercher des lieux</h3>
+                                <p class="card-text">Trouvez le lieu parfait pour votre prochain événement</p>
+                            </div>
+                        </a>
+                        <a href="#add-venue" class="card card-interactive card-flat">
+                            <div class="card-body text-center">
+                                <div class="action-icon">➕</div>
+                                <h3 class="card-title">Ajouter un lieu</h3>
+                                <p class="card-text">Proposez votre espace à la location</p>
+                            </div>
+                        </a>
+                        <a href="#profile" class="card card-interactive card-flat">
+                            <div class="card-body text-center">
+                                <div class="action-icon">👤</div>
+                                <h3 class="card-title">Mon profil</h3>
+                                <p class="card-text">Gérez vos informations personnelles</p>
+                            </div>
+                        </a>
+                        <a href="#messages" class="card card-interactive card-flat">
+                            <div class="card-body text-center">
+                                <div class="action-icon">💬</div>
+                                <h3 class="card-title">Messages</h3>
+                                <p class="card-text">Échangez avec les propriétaires</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- My Bookings -->
+                <div class="dashboard-section">
+                    <div class="section-header flex justify-between items-center mb-md">
+                        <h2 class="section-title">Mes Réservations</h2>
+                        <a href="#all-bookings" class="btn btn-outline btn-sm">Voir tout</a>
+                    </div>
+                    
+                    <div class="bookings-table">
+                        <div class="booking-item">
+                            <div class="booking-venue">
+                                <img src="https://picsum.photos/60/60?random=30" alt="Salle Horizon" class="booking-image">
+                                <div class="booking-info">
+                                    <h4>Salle Horizon</h4>
+                                    <span class="booking-location">Paris 8ème</span>
+                                </div>
+                            </div>
+                            <div class="booking-dates">
+                                <span class="booking-date">15-16 Jan 2025</span>
+                                <span class="booking-time">2 jours</span>
+                            </div>
+                            <div class="booking-status">
+                                <span class="badge badge-success-soft badge-pill">Confirmé</span>
+                            </div>
+                            <div class="booking-actions">
+                                <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir</a>
+                                <button class="btn btn-text btn-sm">Annuler</button>
+                            </div>
+                        </div>
+
+                        <div class="booking-item">
+                            <div class="booking-venue">
+                                <img src="https://picsum.photos/60/60?random=31" alt="Studio Lumière" class="booking-image">
+                                <div class="booking-info">
+                                    <h4>Studio Lumière</h4>
+                                    <span class="booking-location">Lyon 2ème</span>
+                                </div>
+                            </div>
+                            <div class="booking-dates">
+                                <span class="booking-date">22 Jan 2025</span>
+                                <span class="booking-time">1 jour</span>
+                            </div>
+                            <div class="booking-status">
+                                <span class="badge badge-warning-soft badge-pill">En attente</span>
+                            </div>
+                            <div class="booking-actions">
+                                <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir</a>
+                                <button class="btn btn-text btn-sm">Annuler</button>
+                            </div>
+                        </div>
+
+                        <div class="booking-item">
+                            <div class="booking-venue">
+                                <img src="https://picsum.photos/60/60?random=32" alt="Campus Innovation" class="booking-image">
+                                <div class="booking-info">
+                                    <h4>Campus Innovation</h4>
+                                    <span class="booking-location">Bordeaux centre</span>
+                                </div>
+                            </div>
+                            <div class="booking-dates">
+                                <span class="booking-date">28 Jan 2025</span>
+                                <span class="booking-time">1 jour</span>
+                            </div>
+                            <div class="booking-status">
+                                <span class="badge badge-success-soft badge-pill">Confirmé</span>
+                            </div>
+                            <div class="booking-actions">
+                                <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir</a>
+                                <button class="btn btn-text btn-sm">Annuler</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Venues -->
+                <div class="dashboard-section">
+                    <div class="section-header flex justify-between items-center mb-md">
+                        <h2 class="section-title">Mes Lieux</h2>
+                        <a href="#add-venue" class="btn btn-primary btn-sm">Ajouter un lieu</a>
+                    </div>
+                    
+                    <div class="venues-table">
+                        <div class="venue-item">
+                            <div class="venue-info-section">
+                                <img src="https://picsum.photos/80/60?random=33" alt="Salle Phoenix" class="venue-thumbnail">
+                                <div class="venue-details">
+                                    <h4>Salle Phoenix</h4>
+                                    <span class="venue-meta">Marseille • 80 personnes</span>
+                                    <span class="badge badge-success-soft badge-pill">Actif</span>
+                                </div>
+                            </div>
+                            <div class="venue-stats">
+                                <div class="venue-stat">
+                                    <span class="stat-value">12</span>
+                                    <span class="stat-label">Réservations</span>
+                                </div>
+                                <div class="venue-stat">
+                                    <span class="stat-value">85%</span>
+                                    <span class="stat-label">Taux d'occupation</span>
+                                </div>
+                            </div>
+                            <div class="venue-actions">
+                                <button class="btn btn-outline btn-sm">Modifier</button>
+                                <button class="btn btn-text btn-sm">Voir réservations</button>
+                            </div>
+                        </div>
+
+                        <div class="venue-item">
+                            <div class="venue-info-section">
+                                <img src="https://picsum.photos/80/60?random=34" alt="Espace Zen" class="venue-thumbnail">
+                                <div class="venue-details">
+                                    <h4>Espace Zen</h4>
+                                    <span class="venue-meta">Nice • 25 personnes</span>
+                                    <span class="badge badge-gray-soft badge-pill">Inactif</span>
+                                </div>
+                            </div>
+                            <div class="venue-stats">
+                                <div class="venue-stat">
+                                    <span class="stat-value">5</span>
+                                    <span class="stat-label">Réservations</span>
+                                </div>
+                                <div class="venue-stat">
+                                    <span class="stat-value">45%</span>
+                                    <span class="stat-label">Taux d'occupation</span>
+                                </div>
+                            </div>
+                            <div class="venue-actions">
+                                <button class="btn btn-outline btn-sm">Modifier</button>
+                                <button class="btn btn-text btn-sm">Activer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="dashboard-section">
+                    <h2 class="section-title mb-md">Activité récente</h2>
+                    <div class="activity-feed">
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <p><strong>Réservation confirmée</strong> - Salle Horizon</p>
+                                <span class="activity-time">Il y a 2 heures</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">💬</div>
+                            <div class="activity-content">
+                                <p><strong>Nouveau message</strong> de Jean Dupont</p>
+                                <span class="activity-time">Il y a 1 jour</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📅</div>
+                            <div class="activity-content">
+                                <p><strong>Nouvelle réservation</strong> pour Espace Zen</p>
+                                <span class="activity-time">Il y a 2 jours</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">⭐</div>
+                            <div class="activity-content">
+                                <p><strong>Nouvel avis</strong> 5 étoiles pour Salle Phoenix</p>
+                                <span class="activity-time">Il y a 3 jours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/logo-white.svg" alt="SpaceHub" class="footer-logo">
+                    <p>Des lieux exceptionnels pour vos événements professionnels.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Lieux</h4>
+                    <ul>
+                        <li><a href="#salles-reunion">Salles de réunion</a></li>
+                        <li><a href="#espaces-evenements">Espaces événements</a></li>
+                        <li><a href="#coworking">Coworking</a></li>
+                        <li><a href="#formations">Salles de formation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#aide">Centre d'aide</a></li>
+                        <li><a href="mailto:contact@spacehub.fr">Nous contacter</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:contact@spacehub.fr">contact@spacehub.fr</a></p>
+                    <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SpaceHub. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

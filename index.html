@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceHub - Location de lieux pour événements</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html">
+                        <img src="assets/images/logo.svg" alt="SpaceHub" class="logo">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                    <li><a href="venues.html" class="nav-link">Lieux</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-outline">Connexion</a>
+                    <a href="register.html" class="btn btn-primary">S'inscrire</a>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="mobile-menu-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                
+                <div class="mobile-nav-menu">
+                    <ul>
+                        <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                        <li><a href="venues.html" class="nav-link">Lieux</a></li>
+                    </ul>
+                    <div class="mobile-nav-actions">
+                        <a href="login.html" class="btn btn-outline">Connexion</a>
+                        <a href="register.html" class="btn btn-primary">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-title mb-md">
+                    Des lieux <span class="highlight">exceptionnels</span><br>
+                    pour vos événements
+                </h1>
+                <p class="hero-description mb-xl">
+                    SpaceHub vous propose une sélection de lieux uniques et flexibles 
+                    pour vos réunions, événements et activités professionnelles.
+                </p>
+                <div class="hero-actions flex gap-md justify-center">
+                    <a href="venues.html" class="btn btn-primary btn-lg">Découvrir nos lieux</a>
+                    <a href="mailto:contact@spacehub.fr" class="btn btn-outline btn-lg">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header text-center mb-xl">
+                <h2 class="section-title mb-sm">Pourquoi choisir SpaceHub ?</h2>
+                <p class="section-description">
+                    Des solutions adaptées à tous vos besoins
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="card card-flat">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">🏢</div>
+                        <h3 class="card-title">Lieux flexibles</h3>
+                        <p class="card-text">Des espaces modulables qui s'adaptent à la taille et au type de votre événement.</p>
+                    </div>
+                </div>
+                <div class="card card-flat">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="card-title">Réservation rapide</h3>
+                        <p class="card-text">Système de réservation en ligne simple et efficace, disponible 24h/24.</p>
+                    </div>
+                </div>
+                <div class="card card-flat">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">🛡️</div>
+                        <h3 class="card-title">Service premium</h3>
+                        <p class="card-text">Accompagnement personnalisé et support technique pour garantir le succès de vos événements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Venues -->
+    <section class="popular-venues">
+        <div class="container">
+            <div class="section-header text-center mb-xl">
+                <h2 class="section-title mb-sm">Lieux populaires</h2>
+                <p class="section-description">Découvrez nos espaces les plus demandés</p>
+            </div>
+            <div class="venues-grid">
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=1" alt="Salle de conférence moderne" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Salle Horizon</h3>
+                        <p class="card-text venue-location">Paris 8ème</p>
+                        <p class="card-text venue-capacity">Jusqu'à 150 personnes</p>
+                        <p class="venue-price">À partir de 250€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=2" alt="Espace coworking lumineux" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Studio Lumière</h3>
+                        <p class="card-text venue-location">Lyon 2ème</p>
+                        <p class="card-text venue-capacity">Jusqu'à 50 personnes</p>
+                        <p class="venue-price">À partir de 120€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=3" alt="Salle de formation équipée" class="card-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Campus Innovation</h3>
+                        <p class="card-text venue-location">Bordeaux centre</p>
+                        <p class="card-text venue-capacity">Jusqu'à 80 personnes</p>
+                        <p class="venue-price">À partir de 180€/jour</p>
+                        <a href="venue-detail.html" class="btn btn-outline btn-sm">Voir détails</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-actions text-center">
+                <a href="venues.html" class="btn btn-primary">Voir tous les lieux</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2 class="cta-title mb-sm">Prêt à réserver votre lieu ?</h2>
+                <p class="cta-description mb-xl">
+                    Rejoignez des centaines d'entreprises qui nous font confiance
+                </p>
+                <a href="mailto:contact@spacehub.fr" class="btn btn-primary btn-lg">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/logo-white.svg" alt="SpaceHub" class="footer-logo">
+                    <p>Des lieux exceptionnels pour vos événements professionnels.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Lieux</h4>
+                    <ul>
+                        <li><a href="#salles-reunion">Salles de réunion</a></li>
+                        <li><a href="#espaces-evenements">Espaces événements</a></li>
+                        <li><a href="#coworking">Coworking</a></li>
+                        <li><a href="#formations">Salles de formation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#aide">Centre d'aide</a></li>
+                        <li><a href="mailto:contact@spacehub.fr">Nous contacter</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:contact@spacehub.fr">contact@spacehub.fr</a></p>
+                    <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SpaceHub. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
