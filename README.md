@@ -136,8 +136,6 @@ Pour des raisons de simplicité, ce fichier ne devra pas dépasser les 300 ligne
 
 1. Cloner le repository
 2. Ouvrir `index.html` dans un navigateur
-3. Pour Symfony : intégrer les templates dans le dossier `templates/`
-4. Adapter les chemins d'assets selon la structure Symfony
 
 ## Compatibilité
 
